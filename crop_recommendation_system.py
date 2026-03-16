@@ -13,7 +13,7 @@ import os
 # Step 1: Load the dataset
 def load_data():
     print("Loading dataset...")
-    df = pd.read_csv("Crop_recommendation.csv")  # Make sure this file exists in the same folder
+    df = pd.read_csv("Crop_recommendation.csv")  
     return df
 
 # Step 2: Train the model
@@ -55,7 +55,7 @@ def predict_crop():
     features = [[N, P, K, temperature, humidity, ph, rainfall]]
     prediction = model.predict(features)
 
-    print(f"\n✅ Recommended Crop: {prediction[0]}")
+    print(f"\n Recommended Crop: {prediction[0]}")
 
 # Step 4: Command-line menu
 def main():
